@@ -1,0 +1,82 @@
+/* container */
+
+@mixin container($horisontal, $vertical) {
+    width: $horisontal;
+    height: $vertical;
+    margin: 0 auto;
+}
+
+@mixin size($width, $height) {
+    width: $width;
+    height: $height;
+}
+
+@mixin background-image($url) {
+    background-image: url($url);
+    background-repeat: space;
+    background-position: center;
+}
+
+@mixin margin($top, $right, $bottom, $left) {
+    margin-top: $top;
+    margin-right: $right;
+    margin-bottom: $bottom;
+    margin-left: $left; 
+}          
+
+@mixin padding($top, $right, $bottom, $left) {
+    padding-top: $top;
+    padding-right: $right;
+    padding-bottom: $bottom;
+    padding-left: $left; 
+}
+
+/* flex-items */
+
+@mixin flex-container($horisontal, $vertical) {
+    display: flex;
+    justify-content: $horisontal;
+    align-items: $vertical;
+}
+
+@mixin flex-container-column($horisontal, $vertical) {
+    display: flex;
+    flex-direction: column;
+    justify-content: $horisontal;
+    align-items: $vertical;
+}
+
+/* position */
+
+@mixin position-top-right($top, $right) {
+    position: absolute;
+    top: $top;
+    right: $right;
+}
+
+/* content */
+
+@mixin content-decription($style, $size, $height, $color) {
+    font-family: ABeeZee;
+    font-style: $style;
+    font-weight: normal;
+    font-size: $size;
+    line-height: $height;
+    color: $color;
+}
+
+@mixin text-align($align) {
+    text-align: $align;
+}
+
+@mixin line($width, $height, $color, $b-width, $b-style, $b-color, $left, $top) {
+    content: "";
+    display: block;
+    width: $width;
+    height: $height;
+    color: $color;
+    border: $b-width $b-style $b-color;
+    position: absolute;
+    left: $left;
+    top: $top;
+}
