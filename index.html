@@ -19,22 +19,64 @@
                 <span class="results__items results__items_lime">Success: 0</span>
                 <span class="results__items results__items_pink">Pending: 3</span>
             </div>
-            <form class="filter" action="" method="get">
-                <input class="filter__search" type="search" name="search" id="search" value="Filter" size="45px">
-                <img src="public/images/arrow-right.svg" alt="arrow">
-            </form>
-            <div class="content">
-                <div class="content__block">
-                    <div class="content__left">Standup meeting with the team @5pm</div>
-                    <div class="content__right">
-                        <div c></div>
-                        <img src="" alt="">
-                        <p></p>
-                        <img src="" alt="">
-                        <img src="" alt="">
+            <form class="form" action="" method="get">
+                <input class="form__search" type="search" name="search" id="search" value="Filter" size="45px">
+                <img class="form__icon" src="public/images/arrow-right.svg" alt="arrow">
+                <div class="content">
+                    <div class="content__block">
+                        <div class="content__text">Standup meeting with the team @5pm</div>
+                        <div class="content__item">
+                            <span class="content__priority ">Low Priority</span>
+                            <div class="content__deadline">
+                                <img class="content__label" src="public/images/label.png" alt="label">
+                                <p class="content__data">Jul 10</p>
+                            </div>
+                            <div class="checkbox">
+                                <input class="custom-checkbox" type="checkbox" id="checkbox-tast-1" name="checkbox-tast-1">
+                                <label for="checkbox-tast-1"></label>
+                            </div>
+                            <a class="content__link" href="#">
+                                <img class="content__link-icon" src="public/images/garbage.svg" alt="trash">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="content__block">
+                        <div class="content__text">Order pizza for Granny tonight</div>
+                        <div class="content__item">
+                            <span class="content__priority">High Priority</span>
+                            <div class="content__deadline">
+                                <img class="content__label" src="public/images/label.png" alt="label">
+                                <p class="content__data">Jul 10</p>
+                            </div>
+                            <div class="checkbox">
+                                <input class="custom-checkbox" type="checkbox" id="checkbox-tast-1" name="checkbox-tast-1">
+                                <label for="checkbox-tast-1"></label>
+                            </div>
+                            <a href="#">
+                                <img class="content__icon" src="public/images/garbage.svg" alt="trash">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="content__block">
+                        <div class="content__text">Design, Develop and Deploy Apps to Netlify for Clients</div>
+                        <div class="content__item">
+                            <span class="content__priority">Medium Priority</span>
+                            <div class="content__deadline">
+                                <img class="content__label" src="public/images/label.png" alt="label">
+                                <p class="content__data">Jul 10</p>
+                            </div>
+                            <div class="checkbox">
+                                <input class="custom-checkbox" type="checkbox" id="checkbox-tast-1" name="checkbox-tast-1">
+                                <label for="checkbox-tast-1"></label>
+                            </div>
+                            <a href="#">
+                                <img class="content__icon" src="public/images/garbage.svg" alt="trash">
+                            </a>
+                        </div>
                     </div>
                 </div>
-            </div>
+            </form>
+            
         </main>
         <footer class="footer">
             <div class="footer__button footer__button_left">
@@ -44,7 +86,7 @@
                 </a>
             </div>
             <div class="footer__button footer__button_right">
-                <a class="footer__link-add-new" href="#">Clear All</a>
+                <a class="footer__link-add-new" href="#">Add New</a>
             </div>
         </footer>
     </section>
