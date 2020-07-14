@@ -3,10 +3,11 @@
 body {
     @include container-color(#5994D9);
     @include container(1366px, 100vh);
+    @include padding(0, 0, 50px, 0);
 
     .name {
         @include title(bold, 28px, 33px, #C9F5FF, center);
-        @include padding(51px, 0, 66px, 0)
+        @include padding(51px, 0, 66px, 0);
     }    
 }
 

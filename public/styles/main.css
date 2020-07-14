@@ -81,7 +81,11 @@ body {
   background-color: #5994D9;
   max-width: 1366px;
   min-height: 100vh;
-  margin: 0 auto; }
+  margin: 0 auto;
+  padding-top: 0;
+  padding-right: 0;
+  padding-bottom: 50px;
+  padding-left: 0; }
   body .name {
     font-family: Poppins;
     font-style: normal;
@@ -202,10 +206,6 @@ body {
     .filter__search:hover, .filter__search:focus, .filter__search:active {
       border-bottom: 2px solid #169357; }
 
-/* container */
-/* flex-items */
-/* position */
-/* content */
 .todolist__main {
   flex: 1 0 auto; }
 
