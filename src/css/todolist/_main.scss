@@ -1,10 +1,18 @@
 @import '../mixins';
 
-// __main">
-//             <div class="todolist__block-results">
-//                 <div class="todolist__items "></div>
-//                 <div class="todolist__items"></div>
-//                 <div class="todolist__items"></div>
-//             </div>
-//             <div class="todolist__filter"></div>
-//             <div class="todolist__content
+body {
+    @include container-color(#5994D9);
+    @include container(1366px, 100vh);
+
+    .name {
+        @include title(bold, 28px, 33px, #C9F5FF, center);
+        @include padding(51px, 0, 66px, 0)
+    }    
+}
+
+.todolist {
+    @include container(1140px, 566px);
+    @include container-color(#ffffff);
+    @include flex-container-column(flex-start, stretch);
+    height: 100%;
+}

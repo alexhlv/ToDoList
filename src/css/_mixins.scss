@@ -91,6 +91,15 @@
     border-bottom: 2px solid #9AEEBB;
 }
 
+@mixin footer-button($f-size, $l-height, $color) {
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: bold;
+    font-size: $f-size;
+    line-height: $l-height;
+    color: $color;
+}
+
 @mixin line($width, $height, $color, $b-width, $b-style, $b-color, $left, $top) {
     content: "";
     display: block;

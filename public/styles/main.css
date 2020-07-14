@@ -100,27 +100,38 @@ body {
   max-width: 1140px;
   min-height: 566px;
   margin: 0 auto;
-  background-color: #ffffff; }
-  .todolist__header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-top: 27px;
-    padding-right: 40px;
-    padding-bottom: 34px;
-    padding-left: 40px; }
-  .todolist__title {
-    font-family: Poppins;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 28px;
-    line-height: 42px;
-    color: #585858;
-    text-align: left;
-    text-transform: uppercase; }
-  .todolist__logo {
-    width: 50px;
-    height: 50px; }
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+  height: 100%; }
+
+/* container */
+/* flex-items */
+/* position */
+/* content */
+.todolist__header {
+  flex: 0 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 27px;
+  padding-right: 40px;
+  padding-bottom: 34px;
+  padding-left: 40px; }
+.todolist__title {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 42px;
+  color: #585858;
+  text-align: left;
+  text-transform: uppercase; }
+.todolist__logo {
+  width: 50px;
+  height: 50px; }
 
 /* container */
 /* flex-items */
@@ -195,5 +206,40 @@ body {
 /* flex-items */
 /* position */
 /* content */
+.todolist__main {
+  flex: 1 0 auto; }
+
+/* container */
+/* flex-items */
+/* position */
+/* content */
+.footer {
+  flex: 0 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 14px;
+  padding-right: 40px;
+  padding-bottom: 14px;
+  padding-left: 40px; }
+  .footer__link-clear-all {
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 27px;
+    color: #4DC97E; }
+  .footer__trash {
+    padding-top: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+    padding-left: 8px; }
+  .footer__link-add-new {
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 36px;
+    color: #DC5252; }
 
 /*# sourceMappingURL=main.css.map */

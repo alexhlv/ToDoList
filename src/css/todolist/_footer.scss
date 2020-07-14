@@ -1,0 +1,30 @@
+@import '../mixins';
+
+.footer {
+    flex: 0 0 auto;
+    @include flex-container(space-between, center);
+    @include padding(14px, 40px, 14px, 40px);
+
+    &__button {
+        &_left {
+
+        }
+
+        &_right {
+
+        }
+    } 
+   
+    &__link-clear-all {
+        @include footer-button(18px, 27px, #4DC97E);
+    }
+    
+    &__trash {
+        @include padding(0, 0, 0, 8px);
+    }
+    
+    &__link-add-new {
+        @include footer-button(24px, 36px, #DC5252);
+
+    }
+}
