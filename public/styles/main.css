@@ -228,7 +228,11 @@ body {
   .content__block {
     display: flex;
     justify-content: space-between;
-    align-items: center; }
+    align-items: center;
+    padding-top: 0;
+    padding-right: 0;
+    padding-bottom: 25px;
+    padding-left: 0; }
   .content__text {
     font-family: Poppins;
     font-style: normal;
@@ -237,7 +241,6 @@ body {
     line-height: 22px;
     color: #000000; }
   .content__item {
-    width: 420px;
     display: flex;
     justify-content: space-between;
     align-items: center; }
@@ -258,10 +261,16 @@ body {
       flex-grow: 0;
       border-radius: 50%;
       margin-right: 0.5em;
-      background-color: #4764C9;
+      background-color: #979797;
       background-repeat: no-repeat;
       background-position: center center;
       background-size: 50% 50%; }
+    .content__priority_low::before {
+      background-color: #4764C9; }
+    .content__priority_high::before {
+      background-color: #D10C0C; }
+    .content__priority_medium::before {
+      background-color: #F1AE00; }
   .content__deadline {
     display: flex;
     justify-content: space-between;

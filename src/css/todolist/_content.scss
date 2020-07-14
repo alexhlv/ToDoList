@@ -5,6 +5,7 @@
 
     &__block {
         @include flex-container(space-between, center);
+        @include padding(0, 0, 25px, 0);
     }
     
     &__text {
@@ -12,16 +13,28 @@
     }
     
     &__item {
-        width: 420px;
+        // width: 420px;
         @include flex-container(space-between, center);
     }
     
     &__priority {
         width: 150px;
         @include content-text;
-
+        
         &::before {
-            @include line(#4764C9);
+            @include circle(#979797);
+        }
+
+        &_low::before {
+            background-color: #4764C9;
+        }
+
+        &_high::before {
+            background-color: #D10C0C;
+        }
+
+        &_medium::before {
+            background-color: #F1AE00;
         }
     }
     
