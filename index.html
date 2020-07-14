@@ -7,6 +7,26 @@
     <link rel="stylesheet" href="./public/styles/main.css">
 </head>
 <body>
-    
+    <h1 class="name">My Todo-list</h1>
+    <section class="todolist">
+        <header class="todolist__header">
+            <h2 class="todolist__title">Todo-list</h2>
+            <img class="todolist__logo" src="./public/images/logo.png" alt="logo">
+        </header>
+        <main class="todolist__main">
+            <div class="results">
+                <span class="results__items results__items_violet">Total: 3</span>
+                <span class="results__items results__items_lime">Success: 0</span>
+                <span class="results__items results__items_pink">Pending: 3</span>
+            </div>
+            <form class="filter" action="" method="get">
+                <input class="filter__search" type="search" name="search" id="search" value="Filter" size="45px">
+                <img src="public/images/arrow-right.svg" alt="arrow">
+            </form>
+            <div class="content"></div>
+        </main>
+        <footer>
+        </footer>
+    </section>
 </body>
 </html>

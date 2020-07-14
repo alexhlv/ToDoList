@@ -1,0 +1,25 @@
+@import '../mixins';
+
+.todolist__main {
+
+}
+.results {
+    @include flex-container(space-between, center);
+    @include padding(0, 40px, 0, 40px);
+
+    &__items {
+        padding: 5px;
+
+        &_violet {
+            @include result(#5231AE, #D6C9D8);
+        }
+        
+        &_lime {
+            @include result(#169357, #9AEEBB);
+        }
+        
+        &_pink {
+            @include result(#DE3838, #F1B1B1);
+        }
+    }
+}

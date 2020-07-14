@@ -1,0 +1,13 @@
+@import '../mixins';
+
+.filter {
+    @include padding(10px, 40px, 34px, 40px);
+
+    &__search {
+        @include filter;
+        
+        &:hover, &:focus, &:active {
+            border-bottom: 2px solid #169357;
+        }
+    }
+}

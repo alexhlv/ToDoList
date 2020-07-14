@@ -51,16 +51,149 @@ table {
   box-sizing: border-box; }
 
 @font-face {
-  font-family: 'ABeeZee';
-  src: url("../../public/fonts/abeezee/ABeeZee-Italic.ttf") format("truetype");
+  font-family: 'Poppins';
+  src: url("../../public/fonts/Poppins/Poppins Italic.ttf") format("truetype");
   font-weight: 400;
   font-style: italic; }
 @font-face {
-  font-family: 'ABeeZee';
-  src: url("../../public/fonts/abeezee/ABeeZee-Regular.ttf") format("truetype");
+  font-family: 'Poppins';
+  src: url("../../public/fonts/Poppins/Poppins Regular.ttf") format("truetype");
   font-weight: 400;
   font-style: normal; }
+@font-face {
+  font-family: 'Poppins';
+  src: url("../../public/fonts/Poppins/Poppins Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal; }
+@font-face {
+  font-family: 'Poppins';
+  src: url("../../public/fonts/Poppins/Poppins Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal; }
 body {
-  font-family: 'ABeeZee', sans-serif; }
+  font-family: 'Poppins', sans-serif; }
+
+/* container */
+/* flex-items */
+/* position */
+/* content */
+body {
+  background-color: #5994D9;
+  max-width: 1366px;
+  min-height: 100vh;
+  margin: 0 auto; }
+  body .name {
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 28px;
+    line-height: 33px;
+    color: #C9F5FF;
+    text-align: center;
+    text-transform: uppercase;
+    padding-top: 51px;
+    padding-right: 0;
+    padding-bottom: 66px;
+    padding-left: 0; }
+
+.todolist {
+  max-width: 1140px;
+  min-height: 566px;
+  margin: 0 auto;
+  background-color: #ffffff; }
+  .todolist__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 27px;
+    padding-right: 40px;
+    padding-bottom: 34px;
+    padding-left: 40px; }
+  .todolist__title {
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 28px;
+    line-height: 42px;
+    color: #585858;
+    text-align: left;
+    text-transform: uppercase; }
+  .todolist__logo {
+    width: 50px;
+    height: 50px; }
+
+/* container */
+/* flex-items */
+/* position */
+/* content */
+.results {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 0;
+  padding-right: 40px;
+  padding-bottom: 0;
+  padding-left: 40px; }
+  .results__items {
+    padding: 5px; }
+    .results__items_violet {
+      font-family: Poppins;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 21px;
+      color: #5231AE;
+      background-color: #D6C9D8;
+      border-radius: 5px;
+      text-transform: uppercase; }
+    .results__items_lime {
+      font-family: Poppins;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 21px;
+      color: #169357;
+      background-color: #9AEEBB;
+      border-radius: 5px;
+      text-transform: uppercase; }
+    .results__items_pink {
+      font-family: Poppins;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 21px;
+      color: #DE3838;
+      background-color: #F1B1B1;
+      border-radius: 5px;
+      text-transform: uppercase; }
+
+/* container */
+/* flex-items */
+/* position */
+/* content */
+.filter {
+  padding-top: 10px;
+  padding-right: 40px;
+  padding-bottom: 34px;
+  padding-left: 40px; }
+  .filter__search {
+    width: 1025px;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 54px;
+    color: #B92121;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    border-bottom: 2px solid #9AEEBB; }
+    .filter__search:hover, .filter__search:focus, .filter__search:active {
+      border-bottom: 2px solid #169357; }
+
+/* container */
+/* flex-items */
+/* position */
+/* content */
 
 /*# sourceMappingURL=main.css.map */

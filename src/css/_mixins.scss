@@ -1,20 +1,14 @@
 /* container */
 
 @mixin container($horisontal, $vertical) {
-    width: $horisontal;
-    height: $vertical;
+    max-width: $horisontal;
+    min-height: $vertical;
     margin: 0 auto;
 }
 
 @mixin size($width, $height) {
     width: $width;
     height: $height;
-}
-
-@mixin background-image($url) {
-    background-image: url($url);
-    background-repeat: space;
-    background-position: center;
 }
 
 @mixin margin($top, $right, $bottom, $left) {
@@ -46,6 +40,10 @@
     align-items: $vertical;
 }
 
+@mixin container-color($color) {
+    background-color: $color;
+}
+
 /* position */
 
 @mixin position-top-right($top, $right) {
@@ -56,17 +54,41 @@
 
 /* content */
 
-@mixin content-decription($style, $size, $height, $color) {
-    font-family: ABeeZee;
-    font-style: $style;
-    font-weight: normal;
+@mixin title($weight, $size, $height, $color, $align) {
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: $weight;
     font-size: $size;
     line-height: $height;
     color: $color;
+    text-align: $align;
+    text-transform: uppercase;
 }
 
-@mixin text-align($align) {
-    text-align: $align;
+@mixin result($color, $bg-color) {
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 21px;  
+    color: $color;
+    background-color: $bg-color;
+    border-radius: 5px;
+    text-transform: uppercase;
+}
+
+@mixin filter {
+    width: 1025px;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 54px;
+    color: #B92121;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    border-bottom: 2px solid #9AEEBB;
 }
 
 @mixin line($width, $height, $color, $b-width, $b-style, $b-color, $left, $top) {
