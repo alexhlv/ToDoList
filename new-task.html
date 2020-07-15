@@ -6,10 +6,41 @@
     <title>Add New Task</title>
     <link rel="stylesheet" href="./public/styles/main.css">
 </head>
-<body>
-    <h1 class="title">Add New Task/h1>
-    <section class="todolist">
-        
-    </section>
+<body class="body-task">
+    <form class="task" action="">
+        <h1 class="task__title">Add New Task</h1>
+        <div class="task__block">
+            <div class="task__item">
+                <label class="task__label">
+                    <img class="task__icon" src="./public/images/star1.svg" alt="star">
+                    Title
+                    <input type="text" name="" id="" value="Tipe something" required>
+                </label>
+            </div>
+            <div class="task__item">
+                <label class="task__label">
+                    <img class="task__icon" src="./public/images/star1.svg" alt="star">
+                    Deadline
+                    <input type="date" name="" id="" value="0000-0-00" required>
+                </label>
+            </div>
+            <div class="task__item">
+                <label class="task__label">
+                    <img class="task__icon" src="./public/images/star1.svg" alt="star">
+                    Priority
+                    <select name="list" required>
+                        <option disabled selected>Choose</option>
+                        <option>Low Priority</option>
+                        <option>Medium Priority</option>
+                        <option>High Priority</option>
+                    </select>
+                </label>
+            </div>
+            <div class="task__wrapper">
+                <button class="task__button">ADD</button>
+           </div>
+            
+        </div>
+    </form>
 </body>
 </html>

@@ -1,6 +1,6 @@
 @import '../mixins';
 
-body {
+.body-to-do-list {
     @include container-color(#5994D9);
     @include container(1366px, 100vh);
     @include padding(0, 0, 50px, 0);

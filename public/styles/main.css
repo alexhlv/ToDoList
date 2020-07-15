@@ -78,7 +78,7 @@ body {
 /* flex-items */
 /* position */
 /* content */
-body {
+.body-to-do-list {
   background-color: #5994D9;
   max-width: 1366px;
   min-height: 100vh;
@@ -87,7 +87,7 @@ body {
   padding-right: 0;
   padding-bottom: 50px;
   padding-left: 0; }
-  body .name {
+  .body-to-do-list .name {
     font-family: Poppins;
     font-style: normal;
     font-weight: bold;
@@ -361,5 +361,66 @@ body {
     font-size: 24px;
     line-height: 36px;
     color: #DC5252; }
+
+.body-task {
+  background-color: #E6E6E6;
+  padding-top: 50px;
+  padding-right: 50px;
+  padding-bottom: 50px;
+  padding-left: 50px; }
+  .body-task .task {
+    background-color: #FBFBFB;
+    max-width: 328px;
+    min-height: 304px;
+    margin: 0 auto;
+    padding-top: 0;
+    padding-right: 0;
+    padding-bottom: 50px;
+    padding-left: 0; }
+    .body-task .task__title {
+      font-family: Poppins;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 24px;
+      line-height: 36px;
+      color: #26B35E;
+      text-align: center;
+      text-transform: uppercase;
+      padding-top: 13px;
+      padding-right: 0;
+      padding-bottom: 0;
+      padding-left: 0; }
+    .body-task .task__block {
+      background-color: #E6E6E6;
+      margin-top: 8px;
+      margin-right: 34px;
+      margin-bottom: 32px;
+      margin-left: 34px; }
+    .body-task .task__item {
+      padding-top: 21px;
+      padding-right: 14px;
+      padding-bottom: 0;
+      padding-left: 12px; }
+    .body-task .task__wrapper {
+      display: flex;
+      justify-content: center; }
+    .body-task .task__button {
+      background: #67D292;
+      border-radius: 5px;
+      font-family: Poppins;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 18px;
+      line-height: 27px;
+      text-align: center;
+      color: #FFFFFF;
+      margin-top: 28px;
+      margin-right: 0;
+      margin-bottom: 21px;
+      margin-left: 0;
+      padding-top: 0px;
+      padding-right: 20px;
+      padding-bottom: 0;
+      padding-left: 20px; }
 
 /*# sourceMappingURL=main.css.map */

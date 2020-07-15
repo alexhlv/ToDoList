@@ -1,18 +1,37 @@
-body {
-    @include container(1366px, 100vh);
-    @include padding(0, 0, 50px, 0);
-}
+.body-task {
+    @include container-color(#E6E6E6);
+    @include padding(50px, 50px, 50px, 50px);
 
-    // body .title {
-    //   font-family: Poppins;
-    //   font-style: normal;
-    //   font-weight: bold;
-    //   font-size: 28px;
-    //   line-height: 33px;
-    //   color: #C9F5FF;
-    //   text-align: center;
-    //   text-transform: uppercase;
-    //   padding-top: 51px;
-    //   padding-right: 0;
-    //   padding-bottom: 66px;
-    //   padding-left: 0; }
+    .task {
+        @include container-color(#FBFBFB);
+        @include container(328px, 304px);
+        @include padding(0, 0, 50px, 0);
+
+        &__title {
+            @include title(600, 24px, 36px, #26B35E, center);
+            @include padding(13px, 0, 0, 0);
+        }
+
+        &__block {
+            @include container-color(#E6E6E6);
+            @include margin(8px, 34px, 32px, 34px);
+        }
+
+        &__item {
+            @include padding(21px, 14px, 0, 12px);
+        }
+
+        &__wrapper {
+            display: flex;	
+            justify-content: center;
+        }
+
+        &__button {
+            background: #67D292;
+            border-radius: 5px;
+            @include button-task;
+            @include margin(28px, 0, 21px, 0);
+            @include padding(0px, 20px, 0, 20px);
+        }
+    }
+}

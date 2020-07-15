@@ -119,6 +119,16 @@
     color: $color;
 }
 
+@mixin button-task {
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 27px;
+    text-align: center;
+    color: #FFFFFF;
+}
+
 @mixin circle($b-color) {
     content: '';
         display: inline-block;
