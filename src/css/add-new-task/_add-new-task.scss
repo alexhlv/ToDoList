@@ -1,5 +1,4 @@
 .body-task {
-    @include container-color(#E6E6E6);
     @include padding(50px, 50px, 50px, 50px);
 
     .task {
@@ -13,7 +12,6 @@
         }
 
         &__block {
-            @include container-color(#E6E6E6);
             @include margin(8px, 34px, 32px, 34px);
         }
 
