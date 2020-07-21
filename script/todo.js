@@ -21,6 +21,10 @@ Task.prototype.toggle = function() {
     this.completed = !this.completed;
 }
 
+Task.prototype.isCompleted = function() {
+    return this.completed;
+}
+
 
 function ToDoList(initialTasks) {
     this.tasks = initialTasks;
@@ -78,4 +82,27 @@ ToDoList.prototype.getTasksList = function(filter) {
     }
 
     return result;
+}
+
+ToDoList.prototype.getStats = function() {
+    const allTasks = this.tasks.length;
+    let completed = 0;
+
+    for (let i = 0; i < allTasks; i++) {
+        if ( this.tasks[i].isCompleted() ) {
+            completed++;
+        }
+    }
+
+    const pending = allTasks - completed;
+
+    return {
+        total: allTasks,
+        completed,
+        pending,
+    }
+}
+
+ToDoList.prototype.clear = function() {
+    this.tasks.length = 0;
 }

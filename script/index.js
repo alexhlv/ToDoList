@@ -23,7 +23,7 @@ function renderTask(task) {
                         <span></span>
                     </label>
                 </div>
-                <a class="content__link" href="#">
+                <a class="content__link" href="#" data-action="remove">
                     <img class="content__link-icon" src="public/images/garbage.svg" alt="trash">
                 </a>
             </div>
@@ -61,39 +61,109 @@ const todoApp = new ToDoList([
     )
 ]);
 
-
 // cписок задач
 const tasksList = document.querySelector('#tasks-list');
 
-tasksList.addEventListener('click', function(event) {
-    const idAttribute = 'data-id';
-    let id = event.target.getAttribute(idAttribute);
+function updateTasksList(filterValue) {
+    const stats = todoApp.getStats();
 
-    if (!id) {
-        id = event.target.closest('[data-id]').getAttribute(idAttribute);
+    for (let key in stats) {
+        const statHTML = document.getElementById(`stats-${key}`);
+
+        statHTML.querySelector('span').innerText = stats[key];
     }
 
-    todoApp.toggle(id);
+    tasksList.innerHTML = renderTasks(todoApp.getTasksList(filterValue));
+}
 
-    tasksList.innerHTML = renderTasks(todoApp.getTasksList(searchField.value));
+tasksList.addEventListener('click', function(event) {
+    const idAttribute = 'data-id';
+
+    if (event.target.getAttribute('data-action') === 'remove' || event.target.closest('[data-action="remove"]')) {
+        event.preventDefault();
+
+        const id = event.target.closest('[data-id]').getAttribute('data-id');
+
+        todoApp.removeTask(id);
+    } else {
+        let id = event.target.getAttribute(idAttribute);
+
+        if (!id) {
+            id = event.target.closest('[data-id]').getAttribute(idAttribute);
+        }
+
+        todoApp.toggle(id);
+    }
+
+    updateTasksList(searchField.value);
 });
 
-tasksList.innerHTML = renderTasks(todoApp.getTasksList());
+updateTasksList();
 
 // фильтр
 const searchField = document.getElementById('search');
 
 searchField.addEventListener('input', function() {
-    tasksList.innerHTML = renderTasks(todoApp.getTasksList(searchField.value));
+    updateTasksList(searchField.value);
 });
 
 
 // модальное окно
-const modal = document.getElementById('modal');
+
 const modalTrigger = document.getElementById('new-task');
+
+function popupHandler(selector) {
+    const modal = document.querySelector(selector);
+
+    const controls = {
+        open() {
+            modal.classList.add('open');
+        },
+        close() {
+            modal.classList.remove('open');
+        }
+    };
+
+    return controls;
+}
+
+const newTaskModal = popupHandler('#modal');
 
 modalTrigger.addEventListener('click', function(event) {
     event.preventDefault();
 
-    modal.classList.add('open');
+    newTaskModal.open();
+});
+
+document.querySelector('.modal').addEventListener('click', newTaskModal.close);
+
+document.querySelector('.task').addEventListener('click', e => e.stopPropagation());
+
+document.querySelector('#clear').addEventListener('click', () => {
+    todoApp.clear();
+
+    updateTasksList(searchField.value);
+});
+
+const newTaskForm = document.querySelector('#new-task-form');
+
+newTaskForm.addEventListener('submit', function() {
+    event.preventDefault();
+
+    const formElements = newTaskForm.elements;
+
+    todoApp.addTask(
+        new Task(
+            formElements.title.value,
+            PRIORITIES[formElements.priority.value],
+            formElements.date.value
+        )
+    );
+
+    formElements.title.value = '';
+    formElements.date.value = '';
+    formElements.priority.value = 0;
+
+    newTaskModal.close();
+    updateTasksList(searchField.value);
 });
